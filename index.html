@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Unaiz Ahmed Bajwa — Principal Software Engineer specialising in PHP & Laravel, Karachi, Pakistan.">
+<meta property="og:title" content="Unaiz Ahmed Bajwa — PHP & Laravel Engineer">
+<meta property="og:description" content="Laravel backends for POS, airline reservation, CRM and HRM systems. Open to roles in Karachi or remote.">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}html{scroll-behavior:smooth}</style>
+<title>Unaiz Ahmed Bajwa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single 1080px column read like a backend request log — hero, figures, experience timeline, projects as routes, skills, credentials, contact. */
+:root{
+  --bg:#F2F4F6; --surface:#FFFFFF; --ink:#11161D; --muted:#5A6573; --line:#DCE1E7;
+  --accent:#2A47D1; --accent-soft:#E4E9FB; --ok:#1B7F55; --ok-soft:#E1F3EA;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0D1117; --surface:#151B24; --ink:#E7ECF2; --muted:#93A0B0; --line:#26303D;
+  --accent:#8EA3FF; --accent-soft:#1C2445; --ok:#5ED39E; --ok-soft:#12291F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D1117; --surface:#151B24; --ink:#E7ECF2; --muted:#93A0B0; --line:#26303D;
+  --accent:#8EA3FF; --accent-soft:#1C2445; --ok:#5ED39E; --ok-soft:#12291F; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:0}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+.mono{font-family:var(--mono)}
+.label{font:500 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px;flex-wrap:wrap}
+.brand{font:700 1rem var(--display);color:var(--ink);text-decoration:none}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem}
+.nav-links a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:center;padding-block:72px 56px}
+.status{display:inline-flex;align-items:center;gap:8px;background:var(--ok-soft);color:var(--ok);font:500 .8rem var(--mono);padding:6px 12px;border-radius:999px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--ok);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.6rem);font-weight:800;letter-spacing:-.03em;margin-top:20px}
+.hero .role{font:500 clamp(1.1rem,2.2vw,1.35rem)/1.4 var(--display);color:var(--accent);margin-top:12px}
+.hero .lede{color:var(--muted);max-width:60ch;margin-top:20px;font-size:1.05rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 .95rem var(--body);padding:12px 20px;border-radius:8px;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--surface);cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:18px;height:18px;flex:none}
+
+.portrait{position:relative;width:100%;max-width:300px;justify-self:end}
+.portrait .frame{aspect-ratio:4/5;max-width:100%;border-radius:20px;overflow:hidden;background:linear-gradient(160deg,var(--accent) 0%,color-mix(in srgb,var(--accent) 55%,var(--ink)) 100%);display:grid;place-items:center}
+.portrait .frame img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait .initials{font:800 6rem var(--display);color:var(--bg);letter-spacing:-.04em}
+.portrait .tag{position:absolute;left:-20px;bottom:24px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font:500 .8rem/1.4 var(--mono);color:var(--muted);box-shadow:0 8px 24px rgb(0 0 0 / .08)}
+.portrait .tag b{color:var(--ink);font-weight:500}
+
+/* figures */
+.figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden}
+.fig{padding:24px;border-left:1px solid var(--line)}
+.fig:first-child{border-left:0}
+.fig strong{display:block;font:800 2.2rem/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.fig span{display:block;color:var(--muted);font-size:.9rem;margin-top:8px;line-height:1.4}
+
+section{padding-block:72px 0}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+.sec-head h2{font-size:clamp(1.8rem,3.6vw,2.4rem);font-weight:700;letter-spacing:-.02em}
+
+/* experience */
+.timeline{display:grid;gap:0;border-left:2px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 40px 32px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
+.job.current::before{border-color:var(--accent);background:var(--accent)}
+.job-top{display:flex;justify-content:space-between;gap:8px 24px;flex-wrap:wrap}
+.job h3{font-size:1.35rem;font-weight:700}
+.job .org{color:var(--muted);margin-top:4px}
+.job .when{font:500 .85rem var(--mono);color:var(--muted);white-space:nowrap}
+.job ul{margin:16px 0 0;padding-left:18px;display:grid;gap:8px;max-width:75ch}
+.job li::marker{color:var(--accent)}
+.job.small h3{font-size:1.1rem}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.proj.wide{grid-column:1/-1}
+.route{display:flex;align-items:center;gap:10px;font:500 .8rem var(--mono);color:var(--muted);overflow-x:auto;white-space:nowrap}
+.verb{padding:3px 8px;border-radius:5px;background:var(--accent-soft);color:var(--accent);font-weight:500}
+.proj h3{font-size:1.3rem;font-weight:700}
+.proj .where{font-size:.85rem;color:var(--muted)}
+.proj p{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.chip{font:400 .75rem var(--mono);padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.skill-group{min-width:0}
+.skill-group h3{font:500 .75rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+
+/* credentials */
+.creds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.cred-list{display:grid;gap:18px}
+.cred{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.cred:last-child{border-bottom:0;padding-bottom:0}
+.cred b{display:block;font-weight:600}
+.cred span{color:var(--muted);font-size:.9rem}
+.cred .yr{font:500 .85rem var(--mono);color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* contact */
+.contact{margin-block:88px 40px;background:var(--ink);color:var(--bg);border-radius:20px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
+.contact h2{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;letter-spacing:-.02em}
+.contact p{color:color-mix(in srgb,var(--bg) 70%,var(--ink));margin-top:14px;max-width:46ch}
+.c-rows{display:grid;gap:10px}
+.c-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:10px;background:color-mix(in srgb,var(--bg) 8%,var(--ink));min-width:0}
+.c-row .k{font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:color-mix(in srgb,var(--bg) 55%,var(--ink))}
+.c-row .v{font:500 .95rem var(--mono);color:var(--bg);user-select:all;overflow-wrap:anywhere}
+.c-row a.v{text-decoration:none}
+.copy{flex:none;font:500 .75rem var(--mono);background:transparent;color:var(--bg);border:1px solid color-mix(in srgb,var(--bg) 30%,var(--ink));border-radius:6px;padding:6px 10px;cursor:pointer}
+footer{padding-block:0 40px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:40px;padding-block:48px 40px}
+  .portrait{justify-self:start;max-width:240px;order:-1}
+  .portrait .tag{left:auto;right:-12px}
+  .figures{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fig:nth-child(3){border-left:0}
+  .fig:nth-child(n+3){border-top:1px solid var(--line)}
+  .projects,.creds,.contact{grid-template-columns:1fr}
+  .skills{grid-template-columns:1fr}
+  .nav-links{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Unaiz Ahmed Bajwa</a>
+    <div class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <div>
+      <span class="status"><i></i>Open to new roles · Karachi / Remote</span>
+      <h1>Unaiz Ahmed Bajwa</h1>
+      <p class="role">Principal Software Engineer · PHP &amp; Laravel</p>
+      <p class="lede">I design and build Laravel backends for business-critical systems: point-of-sale, airline reservations, CRM, HRM and construction management. I have led teams of up to 8 engineers and care about clean APIs, fast queries and code that the next developer can maintain.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Hire me</a>
+        <a class="btn" href="https://www.linkedin.com/in/unaiz-ahmed-bajwa-236a51237/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.65 4.76 6.1V21h-4v-4.9c0-1.17-.02-2.68-1.63-2.68-1.64 0-1.89 1.28-1.89 2.6V21h-4V9.75Z"/></svg>
+          LinkedIn</a>
+        <a class="btn" href="https://github.com/UNAIZAHMEDBAJWA-DEV" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          GitHub</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="frame" id="photo">
+        <!-- PHOTO: replace the span below with <img src="..." alt="Unaiz Ahmed Bajwa"> -->
+        <span class="initials" aria-label="Unaiz Ahmed Bajwa">UB</span>
+      </div>
+      <div class="tag"><b>$ php artisan serve</b><br>Karachi, Pakistan</div>
+    </div>
+  </header>
+
+  <div class="figures" aria-label="Highlights">
+    <div class="fig"><strong>7+</strong><span>years building software</span></div>
+    <div class="fig"><strong>8</strong><span>developers led at Tafsol</span></div>
+    <div class="fig"><strong>6+</strong><span>airline / GDS APIs integrated</span></div>
+    <div class="fig"><strong>−30%</strong><span>average API response time</span></div>
+  </div>
+
+  <section id="experience">
+    <div class="sec-head"><h2>Experience</h2><span class="label">2019 → today</span></div>
+    <div class="timeline">
+      <article class="job current">
+        <div class="job-top">
+          <div><h3>Principal Software Engineer</h3><p class="org">InterSys · Karachi</p></div>
+          <span class="when">May 2025 – Present</span>
+        </div>
+        <ul>
+          <li>Lead architecture of an enterprise Point-of-Sale system: Laravel backend, REST APIs and schema handling 500+ daily transactions across multiple outlets.</li>
+          <li>Own full-cycle delivery of a Travel &amp; Airlines Reservation System with 6+ third-party airline/GDS integrations, ticketing workflows and booking logic.</li>
+          <li>Mentor a team of 6; run code reviews and drive SOLID, TDD and CI/CD adoption.</li>
+          <li>Cut average API response time by 30% through query optimisation, caching and AWS integration.</li>
+          <li>Turn stakeholder requirements into technical roadmaps and support ERP customisation work.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div class="job-top">
+          <div><h3>Senior Team Lead</h3><p class="org">Tafsol Technologies · Karachi</p></div>
+          <span class="when">May 2021 – Apr 2025</span>
+        </div>
+        <ul>
+          <li>Led 8 developers delivering three concurrent Laravel platforms: CRM, HRM and Construction Site Management.</li>
+          <li>Designed secure, scalable backends and REST APIs for all three products end to end.</li>
+          <li>Directed database design and migrations; improved average query performance by 25%.</li>
+          <li>Integrated third-party APIs so data flowed cleanly between CRM, HRM and ERP modules.</li>
+          <li>Reduced post-release production issues by 20% through stricter testing and QA.</li>
+        </ul>
+      </article>
+      <article class="job small">
+        <div class="job-top">
+          <div><h3>Customer Service Relations Intern</h3><p class="org">Bayer Pakistan · Karachi</p></div>
+          <span class="when">Jan 2020 – Apr 2020</span>
+        </div>
+      </article>
+      <article class="job small">
+        <div class="job-top">
+          <div><h3>.NET Developer Intern</h3><p class="org">Smart Milestones · Karachi</p></div>
+          <span class="when">Oct 2019 – Dec 2019</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head"><h2>Key projects</h2><span class="label">5 systems shipped</span></div>
+    <div class="projects">
+      <article class="proj">
+        <div class="route"><span class="verb">POST</span>/api/pos/transactions</div>
+        <div><h3>Point-of-Sale System</h3><p class="where">InterSys</p></div>
+        <p>Real-time retail platform for billing, inventory and reporting across multiple outlets, built for high transaction throughput.</p>
+        <div class="chips"><span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">REST</span><span class="chip">AWS</span></div>
+      </article>
+      <article class="proj">
+        <div class="route"><span class="verb">POST</span>/api/bookings/{pnr}/ticket</div>
+        <div><h3>Travel &amp; Airlines Reservation</h3><p class="where">InterSys</p></div>
+        <p>End-to-end ticketing platform integrating multiple airline/GDS APIs for bookings, fare rules and itinerary management.</p>
+        <div class="chips"><span class="chip">Laravel</span><span class="chip">Node.js</span><span class="chip">PostgreSQL</span><span class="chip">GDS APIs</span><span class="chip">AWS</span></div>
+      </article>
+      <article class="proj">
+        <div class="route"><span class="verb">GET</span>/api/crm/pipeline</div>
+        <div><h3>CRM Platform</h3><p class="where">Tafsol Technologies</p></div>
+        <p>Sales pipelines, support tickets and customer communication workflows in one system.</p>
+        <div class="chips"><span class="chip">Laravel</span><span class="chip">Eloquent</span><span class="chip">MySQL</span><span class="chip">REST</span></div>
+      </article>
+      <article class="proj">
+        <div class="route"><span class="verb">GET</span>/api/hrm/payroll/{month}</div>
+        <div><h3>HRM System</h3><p class="where">Tafsol Technologies</p></div>
+        <p>Employee records, attendance tracking and payroll workflows for enterprise clients.</p>
+        <div class="chips"><span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">REST</span></div>
+      </article>
+      <article class="proj wide">
+        <div class="route"><span class="verb">PATCH</span>/api/sites/{site}/progress</div>
+        <div><h3>Construction Site Management</h3><p class="where">Tafsol Technologies</p></div>
+        <p>Platform for running construction site operations: resource allocation, site activity and project progress tracking.</p>
+        <div class="chips"><span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">PostgreSQL</span><span class="chip">REST</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill-group"><h3>Backend</h3><div class="chips">
+        <span class="chip">PHP / Core PHP</span><span class="chip">Laravel</span><span class="chip">OOP</span><span class="chip">MVC</span><span class="chip">Eloquent ORM</span><span class="chip">REST API design</span><span class="chip">Third-party APIs</span><span class="chip">Laravel Scheduler</span><span class="chip">Microservices</span><span class="chip">Node.js</span><span class="chip">ERP integration</span></div></div>
+      <div class="skill-group"><h3>Data, cloud &amp; front end</h3><div class="chips">
+        <span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">DB optimisation</span><span class="chip">AWS</span><span class="chip">CI/CD</span><span class="chip">Web security</span><span class="chip">Performance tuning</span><span class="chip">JavaScript</span><span class="chip">jQuery / AJAX</span><span class="chip">TDD</span></div></div>
+      <div class="skill-group"><h3>Leadership</h3><div class="chips">
+        <span class="chip">Team leadership</span><span class="chip">Mentoring</span><span class="chip">Code reviews</span><span class="chip">SOLID principles</span><span class="chip">Stakeholder management</span><span class="chip">Full SDLC ownership</span></div></div>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="creds">
+      <div>
+        <div class="sec-head"><h2>Education</h2></div>
+        <div class="cred-list">
+          <div class="cred"><div><b>BS Computer Science</b><span>Iqra University, Karachi</span></div><span class="yr">2017–2021</span></div>
+          <div class="cred"><div><b>Intermediate</b><span>Govt. Dehli College, Karachi</span></div><span class="yr">2015–2017</span></div>
+          <div class="cred"><div><b>Leadership Excellence Award</b><span>Final Year Project, Iqra University</span></div><span class="yr">2022</span></div>
+          <div class="cred"><div><b>Languages</b><span>Urdu (native) · English (professional)</span></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="sec-head"><h2>Certifications</h2></div>
+        <div class="cred-list">
+          <div class="cred"><div><b>Google IT Support Professional Certificate</b><span>Coursera</span></div><span class="yr">2023</span></div>
+          <div class="cred"><div><b>The Complete Web Developer Bootcamp</b><span>Udemy</span></div><span class="yr">2023</span></div>
+          <div class="cred"><div><b>AWS Educate</b><span>Amazon Web Services</span></div><span class="yr">2022</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div>
+      <h2>Let's build your next Laravel system.</h2>
+      <p>Available for full-time roles in Karachi or remote. Email is the fastest way to reach me.</p>
+    </div>
+    <div class="c-rows">
+      <div class="c-row"><div><div class="k">Email</div><a class="v" href="mailto:unaiz.bajwa7599@gmail.com">unaiz.bajwa7599@gmail.com</a></div><button class="copy" type="button" data-copy="unaiz.bajwa7599@gmail.com">Copy</button></div>
+      <div class="c-row"><div><div class="k">Phone / WhatsApp</div><span class="v">+92 315 2314976</span></div><button class="copy" type="button" data-copy="+923152314976">Copy</button></div>
+      <div class="c-row"><div><div class="k">LinkedIn</div><a class="v" href="https://www.linkedin.com/in/unaiz-ahmed-bajwa-236a51237/" target="_blank" rel="noopener">in/unaiz-ahmed-bajwa</a></div></div>
+    </div>
+  </section>
+
+  <footer><span>© 2026 Unaiz Ahmed Bajwa</span><span class="mono">Built with care in Karachi</span></footer>
+</main>
+
+<script>
+document.querySelectorAll('.copy').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const t=b.dataset.copy;
+    const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1600)};
+    try{
+      navigator.clipboard.writeText(t).then(done).catch(()=>sel(b));
+    }catch(e){sel(b)}
+  });
+});
+function sel(b){
+  const v=b.parentElement.querySelector('.v');
+  const r=document.createRange();r.selectNodeContents(v);
+  const s=getSelection();s.removeAllRanges();s.addRange(r);
+  b.textContent='Press Ctrl+C';
+}
+</script>
+</body>
+</html>
